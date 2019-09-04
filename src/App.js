@@ -12,12 +12,14 @@ import Details from './components/Details'
 
 
 function App() {
-  const [data, setData] = useState({ hits: [] });
+  const [data, setData] = useState({
+    records: []
+  });
   
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetchAllObjects();
-      setData(result.data);
+      setData(result);
     };
     fetchData();
   },[])
@@ -28,9 +30,9 @@ function App() {
     <>
 
     <ul>
-      {data.hits.map(item => (
-        <li key={item.objectID}>
-          <p>{item.person}</p>
+        {data.records.map(record => (
+        <li key={record.id}>
+          <p>{record.person}</p>
         </li>
       ))}
     </ul>
