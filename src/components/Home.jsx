@@ -24,7 +24,8 @@ export default function Home() {
    <ul>
     {data.records.map(record => (
      <li key={record.id}>
-      <a href={record.url} target="_blank">{record.displayname}</a>
+      <h3>{record.displayname}</h3>
+      <a href={record.url} target="_blank" rel="noopener noreferrer">{record.displayname}</a>
      </li>
     ))}
    </ul>
