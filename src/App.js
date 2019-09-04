@@ -32,7 +32,7 @@ function App() {
     <ul>
         {data.records.map(record => (
         <li key={record.id}>
-          <p>{record.person}</p>
+            <a href={record.url}>{record.displayname}</a>
         </li>
       ))}
     </ul>
