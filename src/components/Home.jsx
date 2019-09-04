@@ -4,15 +4,14 @@ import {
  fetchImages
 }
  from '../api-helper/services'
-import { async } from 'q';
+
+ import '../App.css'
 
 
 
 export default function Home() {
  const [data, setData] = useState({
-  records: [],
-
-
+  records: []
  });
 
  useEffect(() => {
@@ -35,17 +34,16 @@ export default function Home() {
 
  return (
   <>
-   <ul>
+   <div className="row">
+    <div className="column">
     {data.records.map(record => (
-     <li key={record.id}>
-      
-      <h3>{record.displayname}</h3>
-      <img src={record.baseimageurl} alt="..." />
-      <a href={record.url} target="_blank" rel="noopener noreferrer">{record.displayname}</a>
-     </li>
+     <div key={record.id}>
+      <h4>{record.displayname}</h4>
+      <button className="">More info</button>
+     </div>
     ))}
-   </ul>
-
+    </div>
+   </div>
   </>
  )
 }
