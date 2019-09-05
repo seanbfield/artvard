@@ -19,6 +19,11 @@ export const fetchAllObjects = async () => {
 
 export const fetchImages = async () => {
  const response = await api.get(`/image?apikey=${TOKEN}`)
- console.log(response.data);
  return response.data
 }
+
+
+export const fetchArtist = async (query) => {
+ const response = await api.get(`/person?q=${query}`)
+ return response.data
+};
