@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
-fetchArtist
+  fetchArtist,
+  fetchAllObjects
 }
 from './api-helper/services'
 import { Route, Switch } from 'react-router-dom';
@@ -15,11 +16,14 @@ import Header from './components/Header';
 
 
 function App() {
-  const [data, setData] = useState({ records: [] });
+  const [query, setData] = useState({
+    query: "",
+    records: []
+  });
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetchArtist();
+      const result = await fetchArtist(query);
       setData(result);
     };
     fetchData();
