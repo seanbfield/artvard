@@ -3,7 +3,7 @@ import React from 'react'
 export default function Header() {
  return (
   <div className="header">
-   Artvard.
+   <h2>Artvard.</h2>
   </div>
  )
 }
