@@ -17,7 +17,7 @@
   justify-content: center;
   height: 90vh;
   color: #060403;
-  background: url('./img/museum-illustration.png') no-repeat center center fixed; 
+  background: url('./img/museum-illustration.svg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -67,7 +67,8 @@
 }
  form input[type=search]:focus {
 	 border: solid 3px #09f;
-	 outline: solid #060403 2000px;
+   outline: solid #060403 2000px;
+   opacity: 0.5;
 }
  
 
