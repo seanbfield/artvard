@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default function Home() {
  return (
    <>
@@ -8,6 +9,7 @@ export default function Home() {
          type="search"
          placeholder="Search the Harvard Art Museum"  
        />
+    
      </form>
   </>
  )

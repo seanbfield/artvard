@@ -23,7 +23,7 @@ export const fetchImages = async () => {
 }
 
 
-export const fetchArtist = async (query) => {
- const response = await api.get(`/person?q=${query}`)
+export const fetchArtist = async () => {
+ const response = await api.get(`/person?q=records:displayname`)
  return response.data
 };
