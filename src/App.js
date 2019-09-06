@@ -11,14 +11,13 @@ import Details from './components/Details'
 function App() {
   return (
     <>
-    <div>
+
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/results" component={Results} />
         <Route exact path="/details" component={Details} />
       </Switch>
-      </div>
-      </>
+    </>
   );
 }
 

@@ -1,22 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import {
-  fetchAllObjects,
-  fetchImages
-}
-  from '../api-helper/services'
-
+import { fetchAllObjects, fetchImages } from '../api-helper/services'
 import StackGrid, { transitions, easings } from "react-stack-grid";
+
 import Header from './Header';
 const transition = transitions.scaleDown;
 
-
-
 export default function Home() {
+
   const [data, setData] = useState({ records: [] });
-
   const [img, setImageData] = useState({ records: [] })
-
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -26,7 +18,6 @@ export default function Home() {
     fetchData();
   }, [])
 
-
   useEffect(() => {
     const fetchImg = async () => {
       const result = await fetchImages();
@@ -34,10 +25,6 @@ export default function Home() {
     };
     fetchImg();
   }, [])
-
-
-
-
 
   return (
     <>
@@ -58,12 +45,12 @@ export default function Home() {
           entered={transition.entered}
           leaved={transition.leaved}
         >
-
           {data.records.map(record => (
             <>
               <div key={record.id}>
                 <h3>{record.title}</h3>
                 <br />
+                <img src={record.primaryimageurl} width="200" alt="artist" />
                 {record.culture}
                 <br />
                 {record.period}
@@ -71,15 +58,12 @@ export default function Home() {
                 {record.medium}
                 <br />
                 {record.yearmade}
-                <img src={record.primaryimageurl} width="200" alt="artist" />
                 <a href={record.url} target="_blank">More Info</a>
               </div>
             </>
           ))}
         </StackGrid>
       </div>
-      {/* </div> */}
-
     </>
   )
 }
