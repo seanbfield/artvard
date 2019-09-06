@@ -14,3 +14,10 @@ export const fetchAllObjects = async () => {
  console.log(response.data);
  return response.data
 }
+
+
+export const fetchImages = async () => {
+ const response = await api.get(`/image?apikey=${TOKEN}`)
+ console.log(response.data);
+ return response.data
+}
