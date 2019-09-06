@@ -4,3 +4,51 @@ h1, h2, h3, h4, h5, h6 {
  font-family: 'Crete Round', serif;
 }
 
+body {
+  margin: 0;
+ }
+ 
+ html {
+  font-size: 16px;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Image */
+.image {
+  display: block;
+  margin: 0;
+}
+
+.image figcaption {
+  display: block;
+  margin: .2em 0 0;
+  font-weight: normal;
+}
+
+
+@media (max-width: 580px) {
+  .header h1 {
+    top: 15px;
+    left: 15px;
+    width: 120px;
+  }
+
+  .header nav {
+    top: 15px;
+    left: 135px;
+  }
+
+  .header li {
+    display: block;
+    margin-left: 1em;
+  }
+}

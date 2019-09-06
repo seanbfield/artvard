@@ -5,8 +5,9 @@ import {
 }
  from '../api-helper/services'
 
-import StackGrid, { transitions }  from "react-stack-grid";
-const { scaleDown, fadeDown } = transitions;
+import StackGrid, { transitions, easings }  from "react-stack-grid";
+import Header from './Header';
+const transition = transitions.scaleDown;
 
 
 
@@ -40,16 +41,28 @@ export default function Home() {
 
  return (
   <>
+   <Header />
+
+    
+   <div className="container">
+   <div className="image">
    <StackGrid
-    appear={fadeDown.appear}
-    appeared={fadeDown.appeared}
-    enter={scaleDown.enter}
-    entered={scaleDown.entered}
-    leaved={scaleDown.leaved}
-    columnWidth={200}>
-   <div>
+    monitorImagesLoaded
+    columnWidth={200}
+    duration={600}
+    gutterWidth={20}
+    gutterHeight={15}
+    easing={easings.cubicOut}
+    appearDelay={60}
+    appear={transition.appear}
+    appeared={transition.appeared}
+    enter={transition.enter}
+    entered={transition.entered}
+    leaved={transition.leaved}
+   >
+   
     {data.records.map(record => (
-    <>
+     <>
      <div key={record.id}>
        <h3>{record.title}</h3>
        <br />
@@ -65,8 +78,10 @@ export default function Home() {
       </div>
      </>
     ))}
-    </div>
    </StackGrid>
+    </div>
+     </div>
+ 
   </>
  )
 }
