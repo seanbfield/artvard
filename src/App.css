@@ -20,22 +20,71 @@ body {
   top: 0;
   justify-content: space-between;
   width: 100%;
-  margin-top: 10px;
   margin-right: 10px;
   margin-left: 10px;
+  z-index:1;
+
 }
 
-/* Image */
+
+.ctr-txt{
+  text-align: center;
+  color: #b2bec3;
+}
+/* Search */
+
+.search-container {
+  width:60%;
+  margin-top: 20px;
+}
+input#search-bar {
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: 1px solid #d0cfce;
+  outline: none;
+  background-color: black;
+}
+input#search-bar:focus {
+  border: 1px solid black;
+  transition: 0.35s ease;
+  color: black;
+}
+input#search-bar:focus::-webkit-input-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus::-moz-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+input#search-bar:focus:-ms-placeholder {
+  transition: opacity 0.45s ease;
+  opacity: 0;
+}
+.search-icon {
+  position: relative;
+  float: right;
+  width: 75px;
+  height: 75px;
+  top: -62px;
+  right: -45px;
+}
+
+
+/* Masonry Grid */
 .image {
   display: block;
   margin-top: 140px;
-}
+}  
 
 .image figcaption {
   display: block;
   margin: .2em 0 0;
   font-weight: normal;
-}
+}  
 
 
 @media (max-width: 580px) {
@@ -43,15 +92,17 @@ body {
     top: 15px;
     left: 15px;
     width: 120px;
-  }
+  }  
 
   .header nav {
     top: 15px;
     left: 135px;
-  }
+  }  
 
   .header li {
     display: block;
     margin-left: 1em;
-  }
-}
+  }  
+}  
+
+

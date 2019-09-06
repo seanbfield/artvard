@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { fetchAllObjects, fetchImages } from '../api-helper/services'
 import StackGrid, { transitions, easings } from "react-stack-grid";
+import { useSpring, animated } from 'react-spring'
 
 import Header from './Header';
+
 const transition = transitions.scaleDown;
 
 export default function Home() {
@@ -26,10 +28,10 @@ export default function Home() {
     fetchImg();
   }, [])
 
-  return (
+  const props = useSpring({ opacity: 2, from: { opacity: 0 } })
+  return <animated.div style={props}>
     <>
       <Header />
-      {/* <div className="container mt-5"> */}
       <div className="image">
         <StackGrid
           monitorImagesLoaded
@@ -65,5 +67,5 @@ export default function Home() {
         </StackGrid>
       </div>
     </>
-  )
+  </animated.div >
 }
