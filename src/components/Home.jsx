@@ -44,7 +44,7 @@ export default function Home() {
    <Header />
 
     
-   <div className="container">
+   <div className="container mt-5">
    <div className="image">
    <StackGrid
     monitorImagesLoaded
