@@ -41,12 +41,16 @@ export default function Home() {
     {data.records.map(record => (
     <>
      <div key={record.id}>
-      <p>{record.displayname}</p>
-      {img.records.map(record => (
-       <div key={record.id}>
-      <img src={record.baseimageurl} width="200" alt="artist" />
-      </div>
-      ))}
+       <p>{record.title}</p>
+       <br />
+       {record.culture}
+       <br />
+       {record.period}
+       <br />
+       {record.medium}
+       <br />
+       {record.yearmade}
+       <img src={record.primaryimageurl} width="200" alt="artist" />
       <a href={record.url} target="_blank">More Info</a>
      </div>
      </>

@@ -10,7 +10,7 @@ const api = axios.create({
 
 
 export const fetchAllObjects = async () => {
- const response = await api.get(`/person?apikey=${TOKEN}`)
+ const response = await api.get(`/object?apikey=${TOKEN}`)
  console.log(response.data);
  return response.data
 }
