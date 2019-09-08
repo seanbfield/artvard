@@ -21,3 +21,11 @@ export const fetchImages = async () => {
   console.log(response.data);
   return response.data
 }
+
+
+export const searchArt = async (searchTerm) => {
+  const response = await api.get(`/object?apikey=${TOKEN}&?q=${searchTerm}`)
+  console.log(response.data)
+  return response.data
+}
+
