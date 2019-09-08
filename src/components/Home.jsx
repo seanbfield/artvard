@@ -56,19 +56,7 @@ export default function Home() {
   return <animated.div style={props}>
     <>
       <Header />
-      <form
-        className="search-container"
-        onSubmit={onSubmitHandler}>
 
-        <input
-          type="text"
-          id="search-bar"
-          placeholder="Browse the Harvard Art Museum Collection"
-        />
-
-        <button type="submit">Search</button>
-        <p className="ctr-txt">Powered by the Harvard Art Museums API</p>
-      </form>
       <div className="image">
         <StackGrid
           monitorImagesLoaded

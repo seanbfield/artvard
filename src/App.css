@@ -26,7 +26,6 @@ body {
  z-index: 1;
 }
 
-
 .ctr-txt{
   text-align: center;
   color: #b2bec3;
@@ -34,8 +33,10 @@ body {
 /* Search */
 
 .search-container {
-  width:60%;
-  margin-top: 20px;
+  display: flex;
+  align-content: center;
+  width:90%;
+  margin-top: 120px;
 }
 input#search-bar {
   margin: 0 auto;
