@@ -79,7 +79,6 @@ export default function Home() {
                 {record.medium}
                 <br />
                 {record.yearmade}
-                <a href={record.url} target="_blank" rel="noopener noreferrer">More Info</a>
               </div>
             </>
           ))}
