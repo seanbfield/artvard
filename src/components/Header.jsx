@@ -11,6 +11,7 @@ export default function Header() {
   return <animated.div style={props}>
     <div className="header">
       <img src={logo} width="80px" alt="artvard" />
+
       <a href="https://github.com/seanbfield/artvard"><img src={gh} width="80px" alt="github" /></a>
     </div>
   </animated.div >
